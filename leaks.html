@@ -1,0 +1,108 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="searchbar.css">
+	<title>KhaosRevelation</title>
+   <link rel="icon" href="img/icon.ico" type="image/x-icon">
+
+   <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q481T6CS5Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q481T6CS5Q');
+  </script>
+</head>
+<body>
+
+	<header style="background-color: rgba(0,0,0,0.9);">
+    <div class="BoxTitle">
+      <a href="index.html">
+        <div class="container">
+          <div class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+            <span style="--index: 1;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+            <span style="--index: 2;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <form onsubmit="event.preventDefault();" role="search">
+      <label for="search">Search for stuff</label>
+      <input id="in" type="search" placeholder="Search..." autofocus />
+      <button type="submit">Go</button>    
+    </form>
+  </header>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("form #in").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myList a").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+      var count = $("#myList a:visible").length;
+      $("#count").text(count);
+    });
+    var count = $("#myList a").length;
+      $("#count").text(count);
+  });
+  </script>
+
+  <br>
+  <br>
+  <br>
+  <h1 style="text-align: center; font-size: 60px;">Popular</h1>
+
+  <main class="main">
+    <ul id="myList">
+      <!-- <a href="link" target="_blank"><div class="game" style="background-image: url();"><h1 class="text-game">Text</h1></div></a> -->
+      <a style="display: block;" href="https://mega.nz/folder/UEAUSDYK#mk83ToV1REp-0HTPOANhiw" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/OIP.2b2nZpPMDlCnvPmRExU4QgHaD4?pid=ImgDet&rs=1);"><h1 class="text-game">Mikayla Campinos</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/tN4BWRQB#zhniyTA9ghpsIHjdMUN97A" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/OIP.sb3HDm70SutfE1Bqa4PMdQHaEK?pid=ImgDet&rs=1);"><h1 class="text-game">Brooke Monk</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/czUSgIYL#pB3W9OV5M_FGPPOOwMi_Zw/folder/sikilIYS" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/OIP.Tdj4XPwlLvjOtad6_fqzxAHaEK?pid=ImgDet&rs=1);"><h1 class="text-game">Jenna Ortega</h1></div></a>
+      <a style="display: block;" href="https://www.dropbox.com/sh/jq65yuwkmtinvsk/AADrLx1y4Gd2rbmT2lr-bPq3a?dl=0" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/OIP.r9j4AQ28RRCKgnvc348n6wHaD4?pid=ImgDet&rs=1);"><h1 class="text-game">Breckie Hill</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/lvsxhaSa#ZngSHwYs4K2uLNQeBqUQ1A" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/R.ab644a5bbe8863e1e128414e5ad9cfc9?rik=8ZD32he%2fd0ZqRA&pid=ImgRaw&r=0);"><h1 class="text-game">HannahOwO</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/ReFgFSxK#efOt0Xf652mwzdUGBjqqRg/folder/da0k2QbY" target="_blank"><div class="game" style="background-image: url(https://staticg.sportskeeda.com/editor/2022/09/a2fcc-16620356095029.png?w=840);"><h1 class="text-game">Megnutt</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/FIYUCCaZ#n0xH2yW6jPZ2E_rYiaMISg/folder/IM51FJ7J" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/OIP.KBWkyc3sD3EZA2JhyCbbXgHaEK?pid=ImgDet&rs=1);"><h1 class="text-game">Belle Delphine</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/nqYTFKqb#tLOwcYQJ9s8IL3b_zdCL6A" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/OIP.M-xaFd5zH1TezPXzGXCmUgHaEK?pid=ImgDet&rs=1);"><h1 class="text-game">Bella Thorne</h1></div></a>
+      <a style="display: block;" href="https://mega.nz/folder/ZrABDaIT#EcGEowgr39PuzPyJ90z0tw/folder/JmxzwYKA" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/R.50cf82fe8774c89fe856da92232bce27?rik=GJd0uvUPU0jJIw&pid=ImgRaw&r=0);"><h1 class="text-game">Lana Rhoades</h1></div></a>
+    </ul>
+  </main>
+
+  <br><br>
+  <h1 style="text-align: center; font-size: 60px;">Everything</h1>
+
+  <main class="main"></main>
+   <ul style="margin-bottom: 40px;" id="myList">
+     <!-- <a href="link" target="_blank"><div class="game" style="background-image: url();"><h1 class="text-game">Text</h1></div></a> -->
+     <a style="display: block;" href="https://mega.nz/folder/cTsGBCwD#fmXvd1DzxvWuQZwlaZcF6g" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Stella\ Brooks.webp);"><h1 class="text-game">Stella Brooks</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/5upUECwY#K1CI0GOYB_NIhxXNJtx6Ig" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Melissa\ –\ melimtx.webp);"><h1 class="text-game">Melissa / melimtx</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/pyhwDJ7Q#poY-0hcWDHSbP540HDIHuA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Natalie\ Wang\ TBA\ –\ nigella_pty.webp);"><h1 class="text-game">Natalie Wang TBA / nigella_pty</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/c69DGCaK#JatTFXC5y2ESxQhw4jSRBA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Orla\ Melissaa.webp);"><h1 class="text-game">Orla Melissaa</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/0OtElQyB#LxUyPSHI-4ZXZcKK5GxFFQ/folder/dftXCSiT" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Megan\ Sky\ –\ missmegansky.webp);"><h1 class="text-game">Megan Sky / missmegansky</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/AzcWiKTI#RNwVS23UiEnpeE3BNQ3Z6A/folder/A613VQrC" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Pamela\ –\ p7oh7.webp);"><h1 class="text-game">Pamela / p7oh7</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/1MIxEQ7C#_qasqAR99AyP28PlfWoypw" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Blair\ Winters\ –\ winterswonderland.webp);"><h1 class="text-game">Blair Winters / winterswonderland</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/xvc1ULKZ#K9gP5Is2RMiQVD8PR_ldug" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Eva\ Elfie.webp);"><h1 class="text-game">Eva Elfie</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/5v0lHbxI#2Z2kx1I4-XhomiDbikrDUg" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Vandal\ Bunnie.webp);"><h1 class="text-game">Vandal Bunnie</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/InEUWJpJ#27YLE9dhiI1k8B3Ws-QLAA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Callmeslo\ –\ callmeslooo.webp);"><h1 class="text-game">Callmeslo / callmeslooo</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/km9lgByb#t3oCvzu6aGXC04sxp85cig" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Summer\ Lynn\ Hart.webp);"><h1 class="text-game">Summer Lynn Hart</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/8zVSDbLZ#pMY6xYFPamRNckJQvRMR7g" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Skylar\ Mae\ –\ skylarmaexo.webp);"><h1 class="text-game">Skylar Mae / skylarmaexo</h1></div></a>
+   </ul>
+ </main>
+  
+ <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html","http://127.0.0.1:5500/","http://127.0.0.1:3000/"]});</script>
+
+  <script>
+    $(document).ready(function(){
+      var count = $("#myList a").length;
+      $("#count").text(count);
+    });
+  </script>
+
+</body>
+</html>

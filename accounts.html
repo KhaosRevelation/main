@@ -1,0 +1,128 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="searchbar.css">
+	<title>KhaosRevelation</title>
+   <link rel="icon" href="img/icon.ico" type="image/x-icon">
+
+   <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q481T6CS5Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q481T6CS5Q');
+  </script>
+</head>
+<body>
+
+	<header style="background-color: rgba(0,0,0,0.9);">
+    <div class="BoxTitle">
+      <a href="index.html">
+        <div class="container">
+          <div class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+            <span style="--index: 1;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+            <span style="--index: 2;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <form onsubmit="event.preventDefault();" role="search">
+      <label for="search">Search for stuff</label>
+      <input id="in" type="search" placeholder="Search..." autofocus />
+      <button type="submit">Go</button>    
+    </form>
+  </header>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("form #in").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myList a").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+      var count = $("#myList a:visible").length;
+      $("#count").text(count);
+    });
+    var count = $("#myList a").length;
+      $("#count").text(count);
+  });
+  </script>
+
+  <p class="number-game"><b>Number of account categories : <span id="count"></b></span></p>
+
+  <main class="main">
+    <ul id="myList">
+      <!-- <a style="display: block;" href="accounts/"><div class="game" style="background-image: url(image);"><h1 class="text-account">Name</h1></div></a> -->
+      <a style="display: block;" href="accounts/coinbase.html"><div class="game" style="background-image: url(img/account/coinbase.webp);"><h1 class="text-account">Coinbase</h1></div></a>
+      <a style="display: block;" href="accounts/lol.html"><div class="game" style="background-image: url(img/account/lol.webp);"><h1 class="text-account">League Of Legends</h1></div></a>
+      <a style="display: block;" href="accounts/creditcard.html"><div class="game" style="background-image: url(img/account/cc.webp);"><h1 class="text-account">Credit Cards</h1></div></a>
+      <a style="display: block;" href="accounts/paysafecard.html"><div class="game" style="background-image: url(img/account/paysafecard.webp);"><h1 class="text-account">Paysafecard</h1></div></a>
+      <a style="display: block;" href="accounts/paypal.html"><div class="game" style="background-image: url(img/account/paypal.webp);"><h1 class="text-account">Paypal</h1></div></a>
+      <a style="display: block;" href="accounts/disneyplus.html"><div class="game" style="background-image: url(img/account/disneyplus.webp);"><h1 class="text-account">Disney Plus</h1></div></a>
+      <a style="display: block;" href="accounts/steam.html"><div class="game" style="background-image: url(img/account/steam.webp);"><h1 class="text-account">Steam</h1></div></a>
+      <a style="display: block;" href="accounts/roblox.html"><div class="game" style="background-image: url(img/account/roblox.webp);"><h1 class="text-account">Roblox</h1></div></a>
+      <a style="display: block;" href="accounts/epicgames.html"><div class="game" style="background-image: url(img/account/epicgames.webp);"><h1 class="text-account">Epic Games</h1></div></a>
+      <a style="display: block;" href="accounts/valorant.html"><div class="game" style="background-image: url(img/account/valorant.webp);"><h1 class="text-account">Valorant</h1></div></a>
+      <a style="display: block;" href="accounts/minecraft.html"><div class="game" style="background-image: url(img/account/minecraft.webp);"><h1 class="text-account">Minecraft</h1></div></a>
+      <a style="display: block;" href="accounts/geforcenow.html"><div class="game" style="background-image: url(img/account/geforce\ now.webp);"><h1 class="text-account">Geforce Now</h1></div></a>
+      <a style="display: block;" href="accounts/rockstargames.html"><div class="game" style="background-image: url(img/account/rockstargames.webp);"><h1 class="text-account">Rockstar Games</h1></div></a>
+      <a style="display: block;" href="accounts/chatgpt.html"><div class="game" style="background-image: url(img/account/chatgpt.webp);"><h1 class="text-account">ChatGPT</h1></div></a>
+      <a style="display: block;" href="accounts/surfsharkvpn.html"><div class="game" style="background-image: url(img/account/surfshark.webp);"><h1 class="text-account">Surfshark Vpn</h1></div></a>
+      <a style="display: block;" href="accounts/tunnelbearvpn.html"><div class="game" style="background-image: url(img/account/tunnelbear.webp);"><h1 class="text-account">Tunnel Bear Vpn</h1></div></a>
+      <a style="display: block;" href="accounts/crunchyroll.html"><div class="game" style="background-image: url(img/account/crunchyroll.webp);"><h1 class="text-account">Crunchyroll</h1></div></a>
+      <a style="display: block;" href="accounts/spotify.html"><div class="game" style="background-image: url(img/account/spotify.webp);"><h1 class="text-account">Spotify</h1></div></a>
+      <a style="display: block;" href="accounts/avirapremium.html"><div class="game" style="background-image: url(img/account/avira.webp);"><h1 class="text-account">Avira Premium</h1></div></a>
+      <a style="display: block;" href="accounts/privatevpn.html"><div class="game" style="background-image: url(img/account/privatevpn.webp);"><h1 class="text-account">Private Vpn</h1></div></a>
+      <a style="display: block;" href="accounts/nordvpn.html"><div class="game" style="background-image: url(img/account/nordvpn.webp);"><h1 class="text-account">Nord Vpn</h1></div></a>
+      <a style="display: block;" href="accounts/paramountplus.html"><div class="game" style="background-image: url(img/account/paramountplus.webp);"><h1 class="text-account">Paramount Plus</h1></div></a>
+      <a style="display: block;" href="accounts/discordtokens.html"><div class="game" style="background-image: url(img/account/discord.webp);"><h1 class="text-account">Discord Tokens</h1></div></a>
+      <a style="display: block;" href="accounts/geoguesserpremium.html"><div class="game" style="background-image: url(img/account/geoguesser.webp);"><h1 class="text-account">Geoguesser Premium</h1></div></a>
+      <a style="display: block;" href="accounts/kick.html"><div class="game" style="background-image: url(img/account/kick.webp);"><h1 class="text-account">Kick.com</h1></div></a>
+      <a style="display: block;" href="accounts/instagram.html"><div class="game" style="background-image: url(img/account/instagram.webp);"><h1 class="text-account">Instagram</h1></div></a>
+      <a style="display: block;" href="accounts/hbo.html"><div class="game" style="background-image: url(img/account/hbo.webp);"><h1 class="text-account">HBO</h1></div></a>
+      <a style="display: block;" href="accounts/netflix.html"><div class="game" style="background-image: url(img/account/netflix.webp);"><h1 class="text-account">Netflix</h1></div></a>
+      <a style="display: block;" href="accounts/yahoo.html"><div class="game" style="background-image: url(img/account/yahoo.webp);"><h1 class="text-account">Yahoo</h1></div></a>
+      <a style="display: block;" href="accounts/deezer.html"><div class="game" style="background-image: url(img/account/deezer.webp);"><h1 class="text-account">Deezer</h1></div></a>
+      <a style="display: block;" href="accounts/reddit.html"><div class="game" style="background-image: url(img/account/reddit.webp);"><h1 class="text-account">Reddit</h1></div></a>
+      <a style="display: block;" href="accounts/hbomax.html"><div class="game" style="background-image: url(img/account/hbomax.webp);"><h1 class="text-account">HBO MAX</h1></div></a>
+      <a style="display: block;" href="accounts/meganz.html"><div class="game" style="background-image: url(img/account/meganz.webp);"><h1 class="text-account">Mega nz</h1></div></a>
+      <a style="display: block;" href="accounts/ovpn.html"><div class="game" style="background-image: url(img/account/OVPN.webp);"><h1 class="text-account">Ovpn</h1></div></a>
+      <a style="display: block;" href="accounts/twitch.html"><div class="game" style="background-image: url(img/account/twitch.webp);"><h1 class="text-account">Twitch</h1></div></a>
+      <a style="display: block;" href="accounts/firefox.html"><div class="game" style="background-image: url(img/account/firefox.webp);"><h1 class="text-account">Firefox</h1></div></a>
+      <a style="display: block;" href="accounts/malwarebytes.html"><div class="game" style="background-image: url(img/account/malwarebytes.webp);"><h1 class="text-account">Malwarebytes</h1></div></a>
+      <a style="display: block;" href="accounts/expressvpn.html"><div class="game" style="background-image: url(img/account/expressvpn.webp);"><h1 class="text-account">Express Vpn</h1></div></a>
+      <a style="display: block;" href="accounts/protonvpn.html"><div class="game" style="background-image: url(img/account/protonvpn.webp);"><h1 class="text-account">Proton Vpn</h1></div></a>
+      <a style="display: block;" href="accounts/facebook.html"><div class="game" style="background-image: url(img/account/facebook.webp);"><h1 class="text-account">Facebook</h1></div></a>
+      <a style="display: block;" href="accounts/snapchat.html"><div class="game" style="background-image: url(img/account/snapchat.webp);"><h1 class="text-account">Snapchat</h1></div></a>
+      <a style="display: block;" href="accounts/tiktok.html"><div class="game" style="background-image: url(img/account/tiktok.webp);"><h1 class="text-account">Tiktok</h1></div></a>
+      <a style="display: block;" href="accounts/chesscompremium.html"><div class="game" style="background-image: url(img/account/chesscom.webp);"><h1 class="text-account">Chess.com Premium</h1></div></a>
+      <a style="display: block;" href="accounts/onlyfans.html"><div class="game" style="background-image: url(img/account/onlyfans.webp);"><h1 class="text-account">Only fans</h1></div></a>
+      <a style="display: block;" href="accounts/shopify.html"><div class="game" style="background-image: url(img/account/shopify.webp);"><h1 class="text-account">Shopify</h1></div></a>
+      <a style="display: block;" href="accounts/honeygains.html"><div class="game" style="background-image: url(img/account/honeygains.webp);"><h1 class="text-account">Honeygains</h1></div></a>
+      <a style="display: block;" href="accounts/nike.html"><div class="game" style="background-image: url(img/account/nike.webp);"><h1 class="text-account">Nike</h1></div></a>
+      <a style="display: block;" href="accounts/openai.html"><div class="game" style="background-image: url(img/account/openai.webp);"><h1 class="text-account">OpenAI</h1></div></a>
+      <a style="display: block;" href="accounts/dropbox.html"><div class="game" style="background-image: url(img/account/dropbox.webp);"><h1 class="text-account">Dropbox</h1></div></a>
+      <a style="display: block;" href="accounts/canva.html"><div class="game" style="background-image: url(img/account/canva.webp);"><h1 class="text-account">Canva</h1></div></a>
+      <a style="display: block;" href="accounts/pinterest.html"><div class="game" style="background-image: url(img/account/pinterest.webp);"><h1 class="text-account">Pinterest</h1></div></a>
+      <a style="display: block;" href="accounts/hotmail.html"><div class="game" style="background-image: url(img/account/hotmail.webp);"><h1 class="text-account">Hotmail</h1></div></a>
+
+
+
+    </ul>
+  </main>
+  
+  <script>
+    $(document).ready(function(){
+      var count = $("#myList a").length;
+      $("#count").text(count);
+    });
+  </script>
+
+</body>
+</html>
