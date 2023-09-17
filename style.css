@@ -64,7 +64,7 @@
    padding: 30px;
  }
 
- hr {
+ .hr-index {
    margin-top: 20px;
    border: none;
    border-top: 3px double #333;
@@ -74,8 +74,27 @@
    height: 5px;
  }
  
- hr:after {
+ .hr-index:after {
    background-color: rgb(200, 123, 175);
+   content: 'En/Fr';
+   color: black;
+   padding: 0 4px;
+   position: relative;
+   top: -13px;
+ }
+
+ .hr {
+   margin-top: 20px;
+   border: none;
+   border-top: 3px double #333;
+   color: #333;
+   overflow: visible;
+   text-align: center;
+   height: 5px;
+ }
+
+ .hr:after{
+   background-color: rgba(255, 255, 255, 1);
    content: 'En/Fr';
    color: black;
    padding: 0 4px;
@@ -321,4 +340,37 @@ footer a{
  .list-account{
    border-top: solid 3px black;
    border-bottom: solid 3px black;
+ }
+
+ .access{
+   text-align: center;
+   font-size: 22px;
+   margin-top: 40px;
+   text-decoration: underline;
+   color: white;
+ }
+
+ @media screen and (max-width: 1150px) {
+   .box-sub-title{
+      width: 90%;
+   }
+   .sub-title{
+      font-size: 14px;
+   }
+   .category{
+      width: 300px;
+      height: 275px;
+   }
+   .img-category{
+      width: 175px;
+      height: 175px;
+   }
+   .access{
+      font-size: 18px;
+   }
+   footer{
+      position: relative;
+      margin-top: 40px;
+      font-size: 12px;
+   }
  }
