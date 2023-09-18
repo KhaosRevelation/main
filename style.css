@@ -107,6 +107,12 @@
    font-size: 20px;
  }
 
+ .sub-title-pre{
+   text-align: center;
+   font-size: 20px;
+ }
+ 
+
  main{
    width: 100%;
    display: flex;
@@ -350,6 +356,11 @@ footer a{
    color: white;
  }
 
+ .hta-p{
+   font-size: 30px;
+   width: 60%;
+ }
+
  @media screen and (max-width: 1150px) {
    .box-sub-title{
       width: 90%;
@@ -357,6 +368,14 @@ footer a{
    .sub-title{
       font-size: 14px;
    }
+   .sub-title-pre{
+      text-align: center;
+      font-size: 26px;
+    }
+    .hta-p{
+      width: 75%;
+      font-size: 20px;
+    }
    .category{
       width: 300px;
       height: 275px;
