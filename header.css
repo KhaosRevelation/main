@@ -1,0 +1,14 @@
+@media screen and (max-width: 1150px) {
+   header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 180px;
+      background: black;
+      backdrop-filter: blur(5px);
+    }
+    .container{
+      margin-top: -50px;
+    }
+ }

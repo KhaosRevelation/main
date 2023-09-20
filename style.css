@@ -161,6 +161,7 @@ a{
 }
 
 ul{
+   padding: 0;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -391,5 +392,11 @@ footer a{
       position: relative;
       margin-top: 40px;
       font-size: 12px;
+   }
+   .game{
+      width: 340px;
+      height: 216px;
+      margin: 10px;
+      background-position: center center;
    }
  }
