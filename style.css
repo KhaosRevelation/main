@@ -395,6 +395,10 @@ footer a{
    .access{
       font-size: 18px;
    }
+   .leaks{
+      width: 320px;
+      height: 387px;
+   }
    footer{
       position: relative;
       margin-top: 40px;
