@@ -69,3 +69,38 @@ function formatElapsedTime(elapsedTime) {
  // Mettre à jour le temps écoulé immédiatement au chargement de la page
  updateElapsedTime();
  
+ // Fonction pour convertir la date en format timestamp
+function parseDate(dateString) {
+  return new Date(dateString).getTime();
+}
+
+// Sélectionner la liste d'éléments à trier
+const myList = document.getElementById('myList');
+const items = Array.from(myList.querySelectorAll('a'));
+
+// Convertir les dates en timestamp et stocker dans un tableau avec l'indice
+const datesArray = items.map((item, index) => {
+  const dateElement = item.querySelector('.text-date-account');
+  const dateAttribute = dateElement ? dateElement.getAttribute('data-start-time') : null;
+
+  // Vérifier si l'attribut existe avant de le convertir en timestamp
+  if (dateAttribute) {
+    const timestamp = parseDate(dateAttribute);
+    return { timestamp, index };
+  }
+
+  // Si l'attribut n'existe pas, retourner une date négative pour qu'il apparaisse en dernier
+  return { timestamp: -1, index };
+});
+
+// Trier le tableau de dates par ordre décroissant
+datesArray.sort((a, b) => b.timestamp - a.timestamp);
+
+// Réorganiser les éléments dans myList en fonction du nouveau tri
+datesArray.forEach((dateObj, newIndex) => {
+  const oldIndex = dateObj.index;
+  const currentItem = items[oldIndex];
+  myList.appendChild(currentItem);
+});
+
+ 
