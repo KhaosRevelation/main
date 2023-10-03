@@ -149,6 +149,7 @@
 }
 
 .text-category{
+   font-weight: lighter;
    font-size: 40px;
    padding-top: 20px;
    padding-bottom: 15px;
@@ -434,12 +435,132 @@ footer a{
    width: 60%;
  }
 
+ .user-card {
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding: 1.25rem;
+   box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+   grid-gap: 1rem;
+   gap: 1rem;
+   border-radius: 10px;
+   background-color: #282a2e;
+   background-size: cover;
+   transition: top ease .1s;
+   top: 0;
+   border-bottom: none;
+   --local-colour1-primary: none;
+   --local-colour1-secondary: none;
+   --local-colour2-primary: none;
+   --local-colour2-secondary: none
+}
+
+.user-card__info {
+   padding: 5px
+}
+
+.user-card__service {
+   color: #fff;
+   font-weight: 700;
+   padding-top: .25rem;
+   padding-bottom: .25rem;
+   padding-left: .5rem;
+   padding-right: .5rem;
+   border-radius: .25rem;
+   font-size: 14px
+}
+
+.user-card__name {
+   font-weight: 300;
+   font-size: 28px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   color: #fff
+}
+
+.fancy-image__image {
+   max-width: 100%;
+   height: auto;
+   -o-object-fit: cover;
+   object-fit: cover
+}
+
+.card-list--phone {
+   --card-size: 480px
+}
+
+.card-list__items>* {
+   flex: 0 1 var(--card-size)
+}
+
+.card-list__item--no-results {
+   --card-size: $width-phone;
+   text-align: center;
+   padding: .5em 0;
+   margin: 0 auto
+}
+
+.card-list__items {
+   display: flex;
+   flex-flow: var(--local-flex-flow);
+   justify-content: var(--local-justify);
+   align-items: var(--local-align);
+   gap: .5em
+}
+
+.card-list {
+   --local-flex-flow: row wrap;
+   --local-justify: center;
+   --local-align: stretch;
+   padding: .5em 0
+}
+
+a.image-link .fancy-image__image {
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover
+}
+
+.user-card:hover,.user-card:focus-within {
+   top: -3px
+}
+
+.user-card__icon {
+   width: 80px;
+   height: 80px;
+   align-self: center;
+   overflow: hidden;
+   border-radius: 10px;
+   background-image: url(/static/bundle/assets/loading-38bdc4d8e84c4dc6f0d8.gif);
+   background-position: center;
+   background-repeat: no-repeat
+}
+
+.user-card__icon img {
+   -o-object-fit: cover;
+   object-fit: cover
+}
+
+.user-card__name {
+   font-weight: 300;
+   font-size: 28px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   color: #fff
+}
+
+.user-card__count {
+   color: #fff;
+   font-weight: lighter;
+}
+
  @media screen and (max-width: 1150px) {
    .box-sub-title{
       width: 90%;
    }
    .sub-title{
-      font-size: 14px;
+      font-size: 18px;
    }
    .sub-title-pre{
       text-align: center;
