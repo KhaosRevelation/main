@@ -180,6 +180,24 @@ ul{
    justify-content: center;
 }
 
+.div-game{
+   z-index: 1;
+   background-color: #252423;
+   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+   background-size: cover;
+   width: 333px;
+   height: 500px;
+   background-position: center;
+   margin: 10px;
+   border-radius: 20px;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.div-game:hover{
+   z-index: 2;
+   box-shadow: 0px 0px 10px 5px rgba(231, 59, 59, 0.4);
+   transform: scale(1.05);
+}
 
 .game{
    z-index: 1;
@@ -290,6 +308,21 @@ a{
    z-index: 2;
    box-shadow: 0px 0px 10px 5px rgba(231, 59, 59, 0.4);
    transform: scale(1.05);
+}
+
+.text{
+   -webkit-text-stroke: 1px black;
+   z-index: 100;
+   text-wrap: balance;
+   padding-bottom: 10px;
+   font-size: 27px;
+   color: rgb(221, 221, 40);
+   text-shadow: 3px 3px 5px black;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   height: 100%;
 }
 
 .text-leaks{
