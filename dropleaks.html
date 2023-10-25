@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+   
+   
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <title>KhaosRevelation | DropLeaks</title>
+   <link rel="stylesheet" href="dropleaks.css">
+   <link rel="icon" href="img/icon.ico" type="image/x-icon">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   
+</head>
+<body class="body">
+   
+   <header style="background-color: rgba(0,0,0,0.9);">
+      <div class="BoxTitle">
+        <a href="index.html">
+          <div class="container">
+            <div class="stack" style="--stacks: 3;">
+              <span style="--index: 0;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+              <span style="--index: 1;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+              <span style="--index: 2;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </header>
+    <p class="nextDrop">Next Round in <span id="countdown"></span><br><span class="nextDropPack">x30 New Packs Everyday!</span></p>
+
+    <script>
+      // Créez un événement personnalisé pour indiquer que le script import.js est chargé
+      const importJsLoadedEvent = new Event('importJsLoaded');
+ 
+      // Créez un élément de script pour import.js
+      const importScript = document.createElement('script');
+      importScript.src = 'import.js';
+ 
+      // Attendez que le script import.js soit complètement chargé
+      importScript.addEventListener('load', function() {
+        // Une fois que le script est chargé, déclenchez l'événement importJsLoaded
+        document.dispatchEvent(importJsLoadedEvent);
+      });
+ 
+      // Bloquez le chargement du DOM en utilisant un événement personnalisé
+      document.addEventListener('importJsLoaded', function() {
+        // Le script import.js est chargé, vous pouvez maintenant continuer le chargement du DOM.
+        // Insérez ici le reste du contenu de votre page.
+      });
+ 
+      // Ajoutez le script import.js au DOM
+      document.head.appendChild(importScript);
+    </script>
+<script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html"]});</script>
+    
+</body>
+
+
+</html>
