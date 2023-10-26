@@ -1,24 +1,24 @@
- fetch('https://corsproxy.io/?' + encodeURIComponent('https://dropnudes.com/'))
+fetch('https://corsproxy.io/?' + encodeURIComponent('https://dropnudes.com/'))
    .then(response => response.text())
    .then(html => {
-     const tempElement = document.createElement('div');
-     tempElement.innerHTML = html;
- 
-     const sectionElement = tempElement.querySelector('section');
- 
-     if (sectionElement) {
-       // Insérez la section avant le script Linkvertise
-       document.body.appendChild(sectionElement); // Au cas où le script Linkvertise n'est pas trouvé
- 
-       // Chargez le script Linkvertise
-       shortUrl();
+   const tempElement = document.createElement('div');
+   tempElement.innerHTML = html;
+
+   const sectionElement = tempElement.querySelector('section');
+
+   if (sectionElement) {
+      
+      document.body.appendChild(sectionElement);
+
+      // Chargez le script Linkvertise
+      shortUrl();
       }
    })
    .catch(error => {
-     console.error('Une erreur s\'est produite :', error);
+   console.error('Une erreur s\'est produite :', error);
    });
 
-function shortUrl(){
+   function shortUrl(){
    // Sélectionnez la balise section
    const sectionElement = document.querySelector('section');
 
@@ -37,7 +37,7 @@ function shortUrl(){
    });
 
    loadLinkvertiseScript()
-}
+   }
 }
 
 
@@ -77,7 +77,13 @@ function loadLinkvertiseScript(){
    linksInHeader.forEach(link => {
       link.setAttribute('href', "index.html");
    });
-   
+
+   // Sélectionnez les liens <a> dans la box (ou autre élément, ajustez le sélecteur en conséquence)
+   const linksInBox = document.querySelectorAll('.box-container-sub-title .box-sub-title a');
+   linksInBox.forEach(link => {
+      link.setAttribute('href', "howtoaccess.html");
+   });
+
    // Sélectionnez la balise <section>
    const sectionElement = document.querySelector('section');
 
@@ -88,7 +94,7 @@ function loadLinkvertiseScript(){
 }
 
 function formatTime(number) {
-   return number < 10 ? `0${number}` : number;
+return number < 10 ? `0${number}` : number;
 }
 
 function updateCountdown() {
@@ -98,7 +104,7 @@ function updateCountdown() {
    const targetTime = parisTime.startOf('day').add(11, 'hours');
 
    if (now.isAfter(targetTime)) {
-       targetTime.add(1, 'day');
+      targetTime.add(1, 'day');
    }
 
    const duration = moment.duration(targetTime.diff(now));
@@ -109,7 +115,7 @@ function updateCountdown() {
    // Récupérez l'élément countdown
    const countdownElement = document.getElementById("countdown");
    if (countdownElement) {
-       countdownElement.textContent = `${hours} : ${minutes} : ${seconds}`;
+      countdownElement.textContent = `${hours} : ${minutes} : ${seconds}`;
    }
 
    setTimeout(updateCountdown, 1000);
