@@ -1,9 +1,14 @@
+@charset "UTF-8";@import "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap";.wallet__item::before,.create__item::before,.create__preview .nft__box::before,.app__wrapper::before,.subscribe__wrapper::before,.features__item::before,.collection__item::before,.bid__item::before,.seller__item::after,.seller__item::before {
+   position: absolute;
+   content: ""
+}
+
 *{
    border: 0;
    box-sizing: border-box;
    margin: 0;
    color: black;
-       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   font-family: 'Be Vietnam Pro', sans-serif;
  }
 
  :root {
@@ -12,7 +17,7 @@
  }
 
  body{
-   background-color: #edf0f8;
+   background-color: #F1F1F1;
  }
 
  header{
@@ -75,7 +80,7 @@
  }
  
  .hr-index:after {
-   background-color: rgb(200, 123, 175);
+   background-color: rgb(118, 120, 139);
    content: 'En/Fr';
    color: black;
    padding: 0 4px;
@@ -111,12 +116,25 @@
    text-align: center;
    font-size: 20px;
  }
- 
+
+ .main-container{
+   width: 100%;
+   height: max-content;
+   height: max-content;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
 
  main{
    width: 100%;
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
+ }
+
+ .box-main{
+   width: 802px;
    justify-content: center;
  }
 
@@ -129,31 +147,75 @@
  
  .category {
    backdrop-filter: blur(2px);
-   width: 350px;
-   height: 325px;
-   margin: 10px;
+   width: 240px;
+   height: 264px;
+   margin-left: 24px;
    border-radius: 20px;
    transition: transform 0.3s ease-in-out;
-   margin-top: 75px;
+   margin-top: 20px;
+   margin-bottom: 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-size: 100% auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   transition: background-size 0.3s ease-in-out;
 }
 
 .category:hover{
-   transform: scale(1.05);
+   background-size: 110%;
 }
 
-.img-category{
-   width: 200px;
-   height: 200px;
-   display: block;
-   margin: 0 auto;
+.category2{
+   backdrop-filter: blur(2px);
+   width: 240px;
+   height: 264px;
+   margin-left: 24px;
+   border-radius: 20px;
+   transition: transform 0.3s ease-in-out;
+   margin-top: 20px;
+   margin-bottom: 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-size: 100% auto;
+   background-position: center;
+   background-repeat: no-repeat;
+   transition: background-size 0.3s ease-in-out;
+   background-image: url(img/leaksbackground.jpeg); 
+   width: 548px; 
+   height: 548px; 
+   margin-left: 0px;
+}
+
+.category2:hover{
+   background-size: 110%;
+}
+
+.description-categories{
+   width: 75%;
+   font-size: 14px;
+   opacity: 0.8;
+   font-weight: 100;
+   color: black;
+}
+
+.big-description-categories{
+   width: 85%;
+   font-size: 14px;
+   opacity: 0.8;
+   font-weight: 100;
+   color: black;
 }
 
 .text-category{
-   font-weight: lighter;
-   font-size: 40px;
-   padding-top: 20px;
-   padding-bottom: 15px;
-   text-align: center;
+   width: 75%;
+   color: black;
+   font-size: 18px;
+   font-weight: 700;
+   padding-top: 30px;
+   margin-bottom: 10px;
 }
 
 .iframe-discord{
@@ -236,7 +298,6 @@ ul{
 }
 
 a{
-   padding-top: 20px;
    font-weight: bold;
 }
 
@@ -366,9 +427,16 @@ footer{
    width: 100%;
 }
 
-footer p{
-   padding-top: 20px;
-   padding-bottom: 20px;
+.dmca{
+   padding-top: 30px;
+   text-align: center;
+   color: white;
+   font-size: 16px;
+}
+
+.copyright{
+   padding-top: 30px;
+   padding-bottom: 30px;
    color: white;
    font-size: 20px;
    text-align: center;
@@ -604,12 +672,8 @@ a.image-link .fancy-image__image {
       font-size: 20px;
     }
    .category{
-      width: 300px;
-      height: 275px;
-   }
-   .img-category{
-      width: 175px;
-      height: 175px;
+      width: 548px;
+      margin-left: 0px;
    }
    .access{
       font-size: 18px;
@@ -637,11 +701,6 @@ a.image-link .fancy-image__image {
       font-size: 26px;
    }
  }
- @media screen and (max-width: 1509px) {
-   .iframe-discord{
-      margin-left: 0px;
-   }
- }
 
  @media screen and (max-width: 1459px) {
    .category{
@@ -649,5 +708,22 @@ a.image-link .fancy-image__image {
    }
    .iframe-discord{
       margin-top: 20px;
+   }
+ }
+
+ @media screen and (max-width: 600px) {
+   .main-container{
+      width: 100%;
+   }
+   .box-main{
+      width: 100%;
+   }
+   .category{
+      width: 300px;
+      height: 300px;
+   }
+   .category2{
+      width: 300px;
+      height: 300px;
    }
  }
