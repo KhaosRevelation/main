@@ -412,7 +412,7 @@ a{
 
 .number-game{
    text-align: center;
-   padding-top: 40px;
+   padding-top: 20px;
    font-size: 30px;
 }
 
@@ -665,7 +665,7 @@ a.image-link .fancy-image__image {
    }
    .sub-title-pre{
       text-align: center;
-      font-size: 26px;
+      font-size: 18px;
     }
     .hta-p{
       width: 75%;
