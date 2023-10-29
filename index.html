@@ -1,5 +1,5 @@
 <!DOCTYPE html lang="en">
-<html lang="en">
+<html lang="fr">
 <head>
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="background.css">
@@ -31,6 +31,8 @@
 </head>
 <body style="position: relative; min-height: 100vh;">
 
+  <script src="access.js"></script>
+
 <div class="area" style="z-index: -1;" >
    <!-- <video id="bgVideo" src="video/vv.mp4" autoplay muted loop></video> -->
 
@@ -45,16 +47,8 @@
           </div>
       </div>
     </header>
-   
-   <div class="box-container">
-      <div class="box-container-sub-title">
-         <div class="box-sub-title">
-            <p style="color: white;" class="sub-title"><span>⚠️ Please read "How to access" (by clicking below) before clicking on one of the categories.  ⚠️</span><br> <a class="access" href="howtoaccess.html"><p class="access">How to access ?</p></a> <br><hr class="hr-index"><br><span class="sub-title">⚠️ Merci de bien vouloir lire "comment y accéder" (en cliquant ci dessous) avant de cliquer sur une des catégories. ⚠️</span><a class="access" href="howtoaccess.html"><p class="access">Comment y accéder ?</p></a> </p>
-         </div>
-       </div>
-   </div>
     
-   <div class="main-container">
+   <div class="main-container" style="margin-top: 20px;">
       <a href="leakscategories.html"><div class="category2"><p style="font-size: 30px; width: 85%; color: black;" class="text-category">Free Leaks (+200)</p><span style="color: black;" class="big-description-categories">(everyday 30 new leaks)</span></div></a>
       <main class="box-main">
          <a href="accounts.html"><div style="background-image: url(img/accountsbackground.jpeg)" class="category"><h3 class="text-category">Accounts</h3></div></a>
@@ -64,6 +58,18 @@
          <a href="#"><div style="background-image: url(img/soonbackground.jpeg);" class="category"><h3 class="text-category">Soon <br> (Tier 2)</h3></div></a>
          <a href="#"><div style="background-image: url(img/soonbackground.jpeg);" class="category"><h3 class="text-category">Soon <br> (Tier 3)</h3></div></a>
       </main>
+   </div>
+
+   <div class="box-container" style="margin-top: 20px;">
+      <div class="box-container-sub-title">
+         <div class="box-sub-title">
+            <h2 style="color: white;" class="sub-title"><span class="sub-title">⚠️ Si vous ne comprenez pas comment accéder aux leaks voici une vidéo ci-dessous qui explique comment y accéder. ⚠️</span> </h2>
+         </div>
+       </div>
+   </div>
+
+   <div style="display: flex; align-items: center; margin-top: 20px; flex-direction: column;">
+      <video controls class="videoExplication" src="video/explication.mp4"></video>
    </div>
    
    
@@ -95,8 +101,6 @@
            <li></li>
    </ul>
 </div >
-
-
 
 </body>
 </html>

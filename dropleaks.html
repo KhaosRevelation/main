@@ -16,6 +16,23 @@
    
 </head>
 <body class="body">
+
+  <script>
+    function checkCookie(name) {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          if (cookie.indexOf(name + '=') === 0) {
+              return true; // Le cookie existe
+          }
+      }
+      return false; // Le cookie n'existe pas
+    }
+
+    if (!checkCookie('visite')) {
+      window.location.href = "https://www.khaosrevelation.site/"
+    }
+  </script>
    
    <header style="background-color: rgba(0,0,0,0.9);">
       <div class="BoxTitle">
@@ -65,6 +82,4 @@
 <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html"]});</script>
     
 </body>
-
-
 </html>
