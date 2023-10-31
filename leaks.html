@@ -45,21 +45,56 @@
     </form>
   </header>
 
+  <div id="#top"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    $("form #in").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myList a").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    <script>
+      $(document).ready(function(){
+        $("form #in").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+    
+          // Parcourir toutes les balises <main>
+          $(".main").each(function() {
+            var $main = $(this);
+            var $title = $main.prev(".section-title");
+            var $items = $main.find("a");
+    
+            // Filtrer les éléments dans cette section
+            var visibleItems = $items.filter(function() {
+              return $(this).text().toLowerCase().indexOf(value) > -1;
+            });
+    
+            // Mettre à jour le compteur pour chaque section
+            var count = visibleItems.length;
+            $title.find(".count").text(count);
+    
+            // Masquer ou afficher le titre en fonction du contenu de la section
+            if (count === 0) {
+              $title.hide();
+            } else {
+              $title.show();
+            }
+    
+            // Masquer ou afficher les éléments en fonction de la recherche
+            $items.hide();
+            visibleItems.show();
+    
+            // Masquer ou afficher la balise <main> en fonction de la recherche
+            if (count === 0 && $main.is(":visible")) {
+              $main.hide();
+            } else if (count > 0 && !$main.is(":visible")) {
+              $main.show();
+            }
+          });
+    
+          // Initialisation du compteur global
+          var totalCount = $("#myList a:visible").length;
+          $("#count").text(totalCount);
+        });
       });
-      var count = $("#myList a:visible").length;
-      $("#count").text(count);
-    });
-    var count = $("#myList a").length;
-      $("#count").text(count);
-  });
-  </script>
+    </script>
+    
+    <a href="#top"><div class="button-top"><img src="img/arrow.png" alt=""></div></a>
   
   <div class="box-container-sub-title">
     <div style="background-color: rgba(255, 255, 255, 1);width: 900px;" class="box-sub-title">
@@ -67,10 +102,9 @@
     </div>
   </div>
 
-  <br>
-  <br>
-
-  <p style="text-align: center; font-size: 50px;">Popular</p<>
+  <p class="section-title" style="text-align: center; font-size: 50px;margin-top: 30px;">
+    Popular (<span class="count">0</span>)
+  </p>
 
   <main class="main">
     <ul id="myList">
@@ -86,15 +120,82 @@
       <a style="display: block;" href="https://mega.nz/folder/ZrABDaIT#EcGEowgr39PuzPyJ90z0tw/folder/JmxzwYKA" target="_blank"><div class="game" style="background-image: url(https://th.bing.com/th/id/R.50cf82fe8774c89fe856da92232bce27?rik=GJd0uvUPU0jJIw&pid=ImgRaw&r=0);"><h1 class="text-game">Lana Rhoades</h1></div></a>
     </ul>
   </main>
+
+  <p class="section-title" style="text-align: center; font-size: 50px;margin-top: 30px;">
+    Onlyfans Leaks (<span class="count">0</span>)
+  </p>
+  
+
+  <main class="main">
+   <ul style="margin-bottom: 40px;" id="myList">
+     <!-- <a href="link" target="_blank"><div class="game" style="background-image: url();"><h1 class="text-game">Text</h1></div></a> -->
+     <a style="display: block;" href="https://fileroy.com/Z29OE2Jv1WeM4tv/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Rebekah.jpeg);"><h1 class="text-game">Rebekah</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/vFHss5viIWxi7In/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Meka.jpeg);"><h1 class="text-game">Meka</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/SvFw9JzJaTUTkWh/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Olivia-Clark.jpeg);"><h1 class="text-game">Olivia Clark</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/m5SP5GF1LZweHHc/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Olivia-Rose-Vizakis.jpeg);"><h1 class="text-game">Olivia Rose Vizakis</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/EdjuVdDg0LKVwFD/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Lily-Best.jpeg);"><h1 class="text-game">Lily Best</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/AHm89PkC8ZPzKcZ/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Madison-Byrd.jpeg);"><h1 class="text-game">Madison Byrd</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/cFlHjHWwpx9goD8/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Lola-Mcpherson.jpeg);"><h1 class="text-game">Lola Mcpherson</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/lPw5z18AkHrwebg/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Khristya.jpeg);"><h1 class="text-game">Khristya</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/66Fy2fT9ksXdQwS/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Kelsey-Heinley.jpeg);"><h1 class="text-game">Kelsey Heinley</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/15AJpoyNMqIZYk9/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Carli-Corpodian.jpeg);"><h1 class="text-game">Carli Corpodian</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/mqv3xqqEHIvQy8H/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Hannah-Connors.jpeg);"><h1 class="text-game">Hannah Connors</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/8NdXUAAOAMw1elR/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Katia.jpeg);"><h1 class="text-game">Katia</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/zxInkD2tzn0J4yC/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Kayy.jpeg);"><h1 class="text-game">Kayy</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/gxlnD8HxFFz49Xi/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Angelina-Summer.jpeg);"><h1 class="text-game">Angelina Summer</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/LxNqhjikGKiU7AA/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Bri-Willburn.jpeg);"><h1 class="text-game">Bri Willburn</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/49lbjJ97hrdnRxi/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Chelsea-Turnbo.jpeg);"><h1 class="text-game">Chelsea Turnbo</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/NnPAHomJXHca2kX/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Gwen-Fritz.jpeg);"><h1 class="text-game">Gwen Fritz</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/AFwHt8Fwg3k4M9z/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Ella-Grane.jpeg);"><h1 class="text-game">Ella Grane</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/WS6CxGd7U2tmaT0/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/...173-min.jpeg);"><h1 class="text-game">Ally D</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/yst4anBxyrkrNjA/file" target="_blank"><div class="leaks" style="background-image: url(https://nsfwupload.com/images/2023/10/31/Agoetzke.jpeg);"><h1 class="text-game">Agoetzke</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/VdlmgQgB#j1CbhlD899iUuztZ5o9IKA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/nacrevictoire.webp);"><h1 class="text-game">nacrevictoire</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/cTsGBCwD#fmXvd1DzxvWuQZwlaZcF6g" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Stella\ Brooks.webp);"><h1 class="text-game">Stella Brooks</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/5upUECwY#K1CI0GOYB_NIhxXNJtx6Ig" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Melissa\ –\ melimtx.webp);"><h1 class="text-game">Melissa / melimtx</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/pyhwDJ7Q#poY-0hcWDHSbP540HDIHuA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Natalie\ Wang\ TBA\ –\ nigella_pty.webp);"><h1 class="text-game">Natalie Wang TBA / nigella_pty</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/c69DGCaK#JatTFXC5y2ESxQhw4jSRBA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Orla\ Melissaa.webp);"><h1 class="text-game">Orla Melissaa</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/AzcWiKTI#RNwVS23UiEnpeE3BNQ3Z6A/folder/A613VQrC" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Pamela\ –\ p7oh7.webp);"><h1 class="text-game">Pamela / p7oh7</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/1MIxEQ7C#_qasqAR99AyP28PlfWoypw" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Blair\ Winters\ –\ winterswonderland.webp);"><h1 class="text-game">Blair Winters / winterswonderland</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/xvc1ULKZ#K9gP5Is2RMiQVD8PR_ldug" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Eva\ Elfie.webp);"><h1 class="text-game">Eva Elfie</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/5v0lHbxI#2Z2kx1I4-XhomiDbikrDUg" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Vandal\ Bunnie.webp);"><h1 class="text-game">Vandal Bunnie</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/InEUWJpJ#27YLE9dhiI1k8B3Ws-QLAA" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Callmeslo\ –\ callmeslooo.webp);"><h1 class="text-game">Callmeslo / callmeslooo</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/km9lgByb#t3oCvzu6aGXC04sxp85cig" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Summer\ Lynn\ Hart.webp);"><h1 class="text-game">Summer Lynn Hart</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/8zVSDbLZ#pMY6xYFPamRNckJQvRMR7g" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Skylar\ Mae\ –\ skylarmaexo.webp);"><h1 class="text-game">Skylar Mae / skylarmaexo</h1></div></a>
+   </ul>
+ </main>
   
  <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html","https://www.khaosrevelation.site/leaksmeme.html","http://127.0.0.1:5500/","http://127.0.0.1:3000/"]});</script>
 
-  <script>
-    $(document).ready(function(){
-      var count = $("#myList a").length;
-      $("#count").text(count);
+ <script>
+  $(document).ready(function(){
+    // Compteur global
+    var totalCount = 0;
+
+    $(".main").each(function(index) {
+      var $main = $(this);
+      var $title = $main.prev(".section-title");
+      var $items = $main.find("a");
+      var count = $items.length;
+
+      // Mettre à jour le compteur pour chaque section
+      $title.find(".count").text(count);
+
+      // Ajouter le nombre d'éléments de cette section au compteur global
+      totalCount += count;
+
+      // Masquer le titre si cette section est vide
+      if (count === 0) {
+        $title.hide();
+      } else {
+        $title.show();
+      }
     });
-  </script>
+
+    // Mettre à jour le compteur global
+    $("#count").text(totalCount);
+  });
+</script>
+
 
 </body>
 </html>
