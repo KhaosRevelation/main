@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script async src="https://ss.mndsrv.com/banner.js"></script>
+	<title>Tarrif</title>
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+   * {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html {
+font-size: 15px;
+}
+body {
+background: #f7f7ff;
+font-family: "Montserrat", sans-serif;
+width: 90%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow-x: hidden;
+}
+header{
+display: flex;
+align-items: center;
+width: 100%;
+height: 88px;
+background: black;
+backdrop-filter: blur(5px);
+}
+
+.boxTitle{
+width: 30%;
+height: 100%;
+}
+
+.Title{
+position: relative;
+font-size: 40px;
+margin-left: 20px;
+color: white;
+}
+
+.box-container-sub-title{
+display: flex;
+justify-content: center;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.box-sub-title{
+max-width: 1350px;
+border-radius: 20px;
+background-color: rgba(255, 255, 255, 0.45);
+box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+margin-top: 20px;
+width: 80%;
+display: flex;
+flex-direction: column;
+padding: 30px;
+}
+.toggle {
+margin-top: 2rem;
+color: hsl(234, 14%, 74%);
+display: flex;
+align-items: center;
+}
+.toggle-btn {
+margin: 0 1rem;
+}
+.checkbox {
+display: none;
+}
+
+.sub {
+background: linear-gradient(
+ 135deg,
+ rgba(163, 168, 240, 1) 0%,
+ rgba(105, 111, 221, 1) 100%
+);
+display: flex;
+justify-content: flex-start;
+align-items: center;
+/* height: 25px;
+width: 50px; */
+height: 1.6rem;
+width: 3.3rem;
+border-radius: 1.6rem;
+padding: 0.3rem;
+}
+.circle {
+background-color: #fff;
+height: 1.4rem;
+width: 1.4rem;
+border-radius: 50%;
+}
+.checkbox:checked + .sub {
+justify-content: flex-end;
+}
+
+.cards {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.card {
+background: #fff;
+color: hsl(233, 13%, 49%);
+border-radius: 0.8rem;
+}
+
+.cards .card.active {
+background: linear-gradient(
+ 135deg,
+ rgba(163, 168, 240, 1) 0%,
+ rgba(105, 111, 221, 1) 100%
+);
+color: #fff;
+display: flex;
+align-items: center;
+transform: scale(1.1);
+z-index: 1;
+}
+ul {
+margin: 2.6rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+ul li {
+list-style-type: none;
+display: flex;
+justify-content: center;
+width: 100%;
+padding: 1rem 0;
+}
+ul li.price {
+font-size: 3rem;
+color: hsl(232, 13%, 33%);
+padding-bottom: 2rem;
+}
+.shadow {
+box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card.active .price {
+color: #fff;
+}
+
+.btn {
+margin-top: 1rem;
+height: 2.6rem;
+width: 13.3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 4px;
+background: linear-gradient(
+ 135deg,
+ rgba(163, 168, 240, 1) 0%,
+ rgba(105, 111, 221, 1) 100%
+);
+color: #fff;
+outline: none;
+border: 0;
+font-weight: bold;
+cursor: pointer;
+}
+.active-btn {
+background: #fff;
+color: hsl(237, 63%, 64%);
+cursor: pointer;
+}
+.bottom-bar {
+border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+}
+.card.active .bottom-bar {
+border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
+}
+.pack {
+font-size: 1.6rem;
+}
+
+.responcive{
+   margin-top: 40px;
+}
+
+@media (max-width: 280px) {
+ul {
+ margin: 1rem;
+}
+h1 {
+ font-size: 1.2rem;
+}
+.toggle {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ height: 80px;
+}
+.cards {
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+}
+
+.card {
+ transform: scale(0.8);
+ margin-bottom: 1rem;
+}
+.cards .card.active {
+ transform: scale(0.8);
+}
+}
+
+@media (min-width: 280px) and (max-width: 320px) {
+ul {
+ margin: 20px;
+}
+.cards {
+ display: flex;
+ flex-direction: column;
+}
+.card {
+ margin-bottom: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+.cards {
+ display: flex;
+ flex-direction: column;
+}
+.card {
+ margin-bottom: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+@media (min-width: 414px) and (max-width: 768px) {
+.card {
+ margin-bottom: 1rem;
+ margin-right: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+@media (min-width: 768px) and (max-width: 1046px) {
+.cards {
+ display: flex;
+}
+.card {
+ margin-bottom: 1rem;
+ margin-right: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+
+
+@media (min-width: 1046px) and (max-width: 1812px) {
+   
+
+   .cards {
+ display: flex;
+ flex-direction: column;
+}
+.resp{
+   margin-top: 40px;
+}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="box-container-sub-title">
+  <div style="background-color: rgba(255, 255, 255, 1);width: 1200px;" class="box-sub-title">
+    <p class="sub-title-pre" style="text-align: center;"><span style="font-size: 20px;">Pour effectuer un payement veuillez passer par notre discord en cliquant sur "Rejoindre" et ouvrir un ticket</span></p>
+  </div>
+</div>
+
+  <div style="margin-top: 20px; margin-bottom: 50px;" class="cards">
+    <div class="card shadow resp">
+      <ul>
+        <li class="pack">Vip</li>
+        <li id="basic" class="price bottom-bar">25€</li>
+        <li style="text-align: center;" class="bottom-bar">je poste tout les jours entre 15 et 20 photo ou vidéo de moi</li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/HGXc6AT7N6" target="_blank"><button class="btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+    <div class="card active resp">
+      <ul>
+        <li class="pack">Vip +</li>
+        <li id="professional" class="price bottom-bar">50€</li>
+        <li style="text-align: center;" class="bottom-bar">je poste tout les jours entre 15 et 20 photo ou vidéo de moi</li>
+        <li style="text-align: center;" class="bottom-bar">échange des nudes en privé que je note vos bit❤️ ect </li>
+        <li style="text-align: center;" class="bottom-bar">accès au reel</li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/HGXc6AT7N6" target="_blank"><button class="btn active-btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+    <div class="card shadow resp">
+      <ul>
+        <li class="pack">Sex Cam</li>
+        <li id="master" class="price bottom-bar">25€</li>
+        <li style="text-align: center;" class="bottom-bar">30 minutes ou je me touche <br> je te chauffe ou je peux même faire de toi mon p'tit soumis </li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/HGXc6AT7N6" target="_blank"><button class="btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+    <div style="margin-top: 0px;z-index: -1;"  class="card shadow resp responcive">
+      <ul>
+        <li class="pack">Pieds</li>
+        <li id="master" class="price bottom-bar">25€</li>
+        <li class="bottom-bar">                            10 photos de pieds                            </li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/HGXc6AT7N6" target="_blank"><button class="btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</body>
+</html>
