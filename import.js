@@ -1,10 +1,11 @@
-fetch('https://corsproxy.io/?' + encodeURIComponent('https://dropnudes.com/'))
+fetch('https://corsproxy.io/?' + encodeURIComponent('https://pornleaks.in/packs.php'))
    .then(response => response.text())
    .then(html => {
    const tempElement = document.createElement('div');
    tempElement.innerHTML = html;
 
-   const sectionElement = tempElement.querySelector('section');
+   const sectionElement = tempElement.querySelector('section.pt-35.postxd');
+
 
    if (sectionElement) {
       
@@ -36,12 +37,53 @@ fetch('https://corsproxy.io/?' + encodeURIComponent('https://dropnudes.com/'))
       }
    });
 
+// Sélectionnez toutes les balises 'img' de la page
+var images = document.getElementsByTagName('img');
+
+// Parcourez toutes les images et mettez à jour l'attribut 'src'
+for (var i = 0; i < images.length; i++) {
+  var currentSrc = images[i].getAttribute('src');
+  
+  // Vérifiez si l'attribut 'src' existe
+  if (currentSrc) {
+    // Ajoutez "https://monsite.in/" devant le lien existant
+    var newSrc = "https://pornleaks.in/" + currentSrc;
+    
+    // Mettez à jour l'attribut 'src' avec le nouveau lien
+    images[i].setAttribute('src', newSrc);
+  }
+}
+
+// Sélectionnez toutes les balises 'a' de la page
+var links = document.getElementsByTagName('a');
+
+// Parcourez toutes les balises 'a' et supprimez celles dont le texte commence par "Disable Ads"
+for (var i = 0; i < links.length; i++) {
+  var link = links[i];
+  var linkText = link.textContent.trim();
+
+  if (linkText.startsWith('Disable Ads')) {
+    link.parentNode.removeChild(link);
+  }
+}
+
+// Sélectionnez toutes les balises 'div' avec la classe "col-12" de la page
+var divsToRemove = document.querySelectorAll('div.col-12');
+
+// Parcourez toutes les balises sélectionnées et supprimez-les
+for (var i = 0; i < divsToRemove.length; i++) {
+  var div = divsToRemove[i];
+  div.parentNode.removeChild(div);
+}
+
+
    loadLinkvertiseScript()
    }
 }
 
 
 function loadLinkvertiseScript(){
+   
    // Base URL
    var base_url = "https://link-to.net/";
 
@@ -92,33 +134,3 @@ function loadLinkvertiseScript(){
       sectionElement.style.display = 'flex';
    }
 }
-
-function formatTime(number) {
-return number < 10 ? `0${number}` : number;
-}
-
-function updateCountdown() {
-   const parisTime = moment.tz("Europe/Paris");
-   const now = moment();
-   const startOfDay = moment().startOf('day');
-   const targetTime = parisTime.startOf('day').add(11, 'hours');
-
-   if (now.isAfter(targetTime)) {
-      targetTime.add(1, 'day');
-   }
-
-   const duration = moment.duration(targetTime.diff(now));
-   const hours = formatTime(duration.hours());
-   const minutes = formatTime(duration.minutes());
-   const seconds = formatTime(duration.seconds());
-
-   // Récupérez l'élément countdown
-   const countdownElement = document.getElementById("countdown");
-   if (countdownElement) {
-      countdownElement.textContent = `${hours} : ${minutes} : ${seconds}`;
-   }
-
-   setTimeout(updateCountdown, 1000);
-}
-
-updateCountdown();
