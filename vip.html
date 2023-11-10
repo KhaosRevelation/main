@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script async src="https://ss.mndsrv.com/banner.js"></script>
+	<title>KhaosRevelation</title>
+   <link rel="icon" href="img/icon.ico" type="image/x-icon">
+   <meta name="viewport" content="width=device-width">
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+   <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q481T6CS5Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q481T6CS5Q');
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+   * {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html {
+font-size: 15px;
+}
+body {
+background: #f7f7ff;
+font-family: "Montserrat", sans-serif;
+width: 80%;
+max-width: 1440px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow-x: hidden;
+}
+header{
+display: flex;
+align-items: center;
+width: 100%;
+height: 88px;
+background: black;
+backdrop-filter: blur(5px);
+}
+
+.boxTitle{
+width: 30%;
+height: 100%;
+}
+
+.Title{
+position: relative;
+font-size: 40px;
+margin-left: 20px;
+color: white;
+}
+
+.box-container-sub-title{
+display: flex;
+justify-content: center;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.box-sub-title{
+max-width: 1350px;
+border-radius: 20px;
+background-color: rgba(255, 255, 255, 0.45);
+box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+margin-top: 20px;
+width: 80%;
+display: flex;
+flex-direction: column;
+padding: 30px;
+}
+.toggle {
+margin-top: 2rem;
+color: hsl(234, 14%, 74%);
+display: flex;
+align-items: center;
+}
+.toggle-btn {
+margin: 0 1rem;
+}
+.checkbox {
+display: none;
+}
+
+.sub {
+background: linear-gradient(
+ 135deg,
+ rgba(163, 168, 240, 1) 0%,
+ rgba(105, 111, 221, 1) 100%
+);
+display: flex;
+justify-content: flex-start;
+align-items: center;
+/* height: 25px;
+width: 50px; */
+height: 1.6rem;
+width: 3.3rem;
+border-radius: 1.6rem;
+padding: 0.3rem;
+}
+.circle {
+background-color: #fff;
+height: 1.4rem;
+width: 1.4rem;
+border-radius: 50%;
+}
+.checkbox:checked + .sub {
+justify-content: flex-end;
+}
+
+.cards {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+
+.card {
+background: #fff;
+color: hsl(233, 13%, 49%);
+border-radius: 0.8rem;
+}
+
+.cards .card.active {
+background: linear-gradient(
+ 135deg,
+ rgba(163, 168, 240, 1) 0%,
+ rgba(105, 111, 221, 1) 100%
+);
+color: #fff;
+display: flex;
+align-items: center;
+transform: scale(1.1);
+z-index: 1;
+}
+ul {
+margin: 2.6rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+ul li {
+list-style-type: none;
+display: flex;
+justify-content: center;
+width: 100%;
+padding: 1rem 0;
+}
+ul li.price {
+font-size: 3rem;
+color: hsl(232, 13%, 33%);
+padding-bottom: 2rem;
+}
+.shadow {
+box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card.active .price {
+color: #fff;
+}
+
+.btn {
+margin-top: 1rem;
+height: 2.6rem;
+width: 13.3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 4px;
+background: linear-gradient(
+ 135deg,
+ rgba(163, 168, 240, 1) 0%,
+ rgba(105, 111, 221, 1) 100%
+);
+color: #fff;
+outline: none;
+border: 0;
+font-weight: bold;
+cursor: pointer;
+}
+.active-btn {
+background: #fff;
+color: hsl(237, 63%, 64%);
+cursor: pointer;
+}
+.bottom-bar {
+border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+}
+.card.active .bottom-bar {
+border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
+}
+.pack {
+font-size: 1.6rem;
+}
+
+@media (max-width: 280px) {
+ul {
+ margin: 1rem;
+}
+h1 {
+ font-size: 1.2rem;
+}
+.toggle {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+ height: 80px;
+}
+.cards {
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+}
+
+.card {
+ transform: scale(0.8);
+ margin-bottom: 1rem;
+}
+.cards .card.active {
+ transform: scale(0.8);
+}
+}
+
+@media (min-width: 280px) and (max-width: 320px) {
+ul {
+ margin: 20px;
+}
+.cards {
+ display: flex;
+ flex-direction: column;
+}
+.card {
+ margin-bottom: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+.cards {
+ display: flex;
+ flex-direction: column;
+}
+.card {
+ margin-bottom: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+@media (min-width: 414px) and (max-width: 768px) {
+.card {
+ margin-bottom: 1rem;
+ margin-right: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+@media (min-width: 768px) and (max-width: 1046px) {
+.cards {
+ display: flex;
+}
+.card {
+ margin-bottom: 1rem;
+ margin-right: 1rem;
+}
+.cards .card.active {
+ transform: scale(1);
+}
+}
+
+</style>
+</head>
+<body>
+
+  <script src="access.js"></script>
+
+
+<div class="box-container-sub-title">
+  <div style="background-color: rgba(255, 255, 255, 1);width: 1200px;" class="box-sub-title">
+    <p class="sub-title-pre" style="text-align: center;"><span style="font-size: 20px;">Pour effectuer un payement veuillez passer par notre discord en cliquant sur "Rejoindre" et ouvrir un ticket <br>(Seulement PayPal accepté)</span> <br><br> <span style="color: rgb(212, 73, 73);font-size: 14px; ">⚠️ Si vous quittez le serveur discord vous perdrez vos avantages (veuillez garder une preuve d'achat pour pouvoir vous redonner votre rôle) ⚠️</span></p>
+  </div>
+</div>
+
+  <div class="cards">
+    <div class="card shadow">
+      <ul>
+        <li class="pack">Vip</li>
+        <li id="basic" class="price bottom-bar">Gratuit</li>
+        <li style="text-align: center; color: red;" class="bottom-bar">10 invitations requise <br> sur notre discord</li>
+        <li style="text-align: center;" class="bottom-bar">Pas de publicité sur le site <br> (uniquement la catégorie Leaks)</li>
+        <li style="text-align: center;" class="bottom-bar">Accès au channel discord Vip</li>
+        <li style="text-align: center;" class="bottom-bar">Grade VIP sur le discord</li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/2AVqxaAbuS" target="_blank"><button class="btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+    <div class="card active">
+      <ul>
+        <li class="pack">Vip Ultime</li>
+        <li id="professional" class="price bottom-bar">10€</li>
+        <li style="text-align: center;" class="bottom-bar">Pas de publicité sur le site <br> (uniquement la catégorie Leaks)</li>
+        <li style="text-align: center;" class="bottom-bar">Accès au channel discord Mega leaks <br> (contient des Go de leaks)</li>
+        <li style="text-align: center;" class="bottom-bar">Accès à la catégorie PornLeaks <br> contient plus de 400 leaks <br> (mise à jour très régulièrement)</li>
+        <li style="text-align: center;" class="bottom-bar">Accès au channel discord Vip Ultime</li>
+        <li style="text-align: center;" class="bottom-bar">Grade VIP Ultime sur le discord</li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/2AVqxaAbuS" target="_blank"><button class="btn active-btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+    <div class="card shadow">
+      <ul>
+        <li class="pack">Vip +</li>
+        <li id="master" class="price bottom-bar">5€</li>
+        
+        <li style="text-align: center;" class="bottom-bar">Pas de publicité sur le site <br> (uniquement la catégorie Leaks)</li>
+        <li style="text-align: center;" class="bottom-bar">Accès au channel discord Mega leaks <br> (contient des Go de leaks)</li>
+        <li style="text-align: center;" class="bottom-bar">Accès au channel discord Vip +</li>
+        <li style="text-align: center;" class="bottom-bar">Grade VIP + sur le discord</li>
+        <li><a style="text-decoration: none;" href="https://discord.gg/2AVqxaAbuS" target="_blank"><button class="btn">Rejoindre</button></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <a style="margin-top: 40px;margin-bottom: 40px;" href="index.html"><h2>Revenir sur KhaosRevelation</h2></a>
+</body>
+
+</body>
+</html>

@@ -603,7 +603,7 @@ footer a{
    display: flex;
    align-items: center;
    padding: 1.25rem;
-   box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+   box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,0.1);
    grid-gap: 1rem;
    gap: 1rem;
    border-radius: 10px;
@@ -716,6 +716,26 @@ a.image-link .fancy-image__image {
 .user-card__count {
    color: #fff;
    font-weight: lighter;
+}
+
+.box-vip{
+   width: 300px;
+   height: 400px;
+   box-shadow: 0 0px 10px 5px rgba(0,0,0,0.3);
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+}
+
+.vip-titre{
+   text-align: center;
+   margin-top: 30px;
+   font-size: 40px;
+}
+
+.vip-avantage{
+   text-align: center;
+   margin-top: 30px;
 }
 
  @media screen and (max-width: 1150px) {
