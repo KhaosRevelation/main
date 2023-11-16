@@ -128,6 +128,10 @@
   <main class="main">
    <ul style="margin-bottom: 40px;" id="myList">
      <!-- <a href="link" target="_blank"><div class="game" style="background-image: url();"><h1 class="text-game">Text</h1></div></a> -->
+     <a style="display: block;" href="https://mega.nz/folder/mBMSmKwT#vK1uN8DSBA6KW3L5pjQuaw" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/Jn2Is72.jpg);"><h1 id="corinna-kopf" class="text-game">Corinna Kopf</h1></div></a>
+     <a style="display: block;" href="https://fileroy.com/eRR2pMZUFdQfMIK/file" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/Jn2Iidl.jpg);"><h1 id="daniela-antury" class="text-game">Daniela Antury</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/folder/VyNVmBwS#ONtMFNgcDc9Beov1L3IxcA/folder/sj8XTbbJ" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/Jn2Rvaf.jpg);"><h1 id="arikytsya" class="text-game">AriKytsya</h1></div></a>
+     <a style="display: block;" href="https://mega.nz/file/LYZCjIKQ#W_WAZCa5RjIAlCM0zvmRwVIudfUGUxiGQIx8Cq6N_JU" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/Jn2ILeS.jpg);"><h1 id="urbabydollxo" class="text-game">Urbabydollxo</h1></div></a>
      <a style="display: block;" href="https://fileroy.com/BuiEkBncwHlLyOT/file" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/JB5IpDX.jpg);"><h1 id="wejdene" class="text-game">Wejdene <br> (sextape)</h1></div></a>
      <a style="display: block;" href="https://fileroy.com/AdMUSmLle6KrkZ8/file" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/JB5T9xn.jpg);"><h1 id="ad-laurent-et-onfire" class="text-game">Ad Laurent et Onfire <br> (sextape)</h1></div></a>
      <a style="display: block;" href="https://fileroy.com/0if138DJTnVB9P8/file" target="_blank"><div class="leaks" style="background-image: url(https://iili.io/JB53fHJ.jpg);"><h1 id="lindsey-loup" class="text-game">Lindsey Loup</h1></div></a>
@@ -211,6 +215,75 @@
      <a style="display: block;" href="https://mega.nz/folder/8zVSDbLZ#pMY6xYFPamRNckJQvRMR7g" target="_blank"><div class="leaks" style="background-image: url(img/leaks/Skylar\ Mae\ –\ skylarmaexo.webp);"><h1 id="skylar-mae-skylarmaexo" class="text-game">Skylar Mae / skylarmaexo</h1></div></a>
    </ul>
  </main>
+
+ <script>
+  
+function shortUrl(){
+
+// Sélectionnez toutes les balises <a> enfants de la balise section
+const linksInSection = document.querySelectorAll('a');
+
+// Parcourez les liens et ajoutez "https://redir.me/?" devant chaque URL
+linksInSection.forEach(link => {
+  const lienOriginal = link.getAttribute('href');
+  // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
+  if (!lienOriginal.startsWith('https://redir.me/?')) {
+     const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#https://redir.me/?' + lienOriginal;
+     link.setAttribute('href', nouveauLien);
+  }
+});
+
+loadLinkvertiseScript()
+}
+
+shortUrl()
+
+
+function loadLinkvertiseScript(){
+
+// Base URL
+var base_url = "https://link-to.net/";
+
+// ID de l'utilisateur (remplacez ceci par votre véritable user_id)
+var user_id = "472897";
+
+// URL de base pour la redirection dynamique
+var dynamic_url = base_url + user_id + "/" + (Math.random() * 1000) + "/dynamic/";
+
+// Obtenez tous les liens enfants de la balise <section>
+const section = document.querySelector('section');
+if (section) {
+const links = section.querySelectorAll('a');
+
+// Parcourez les liens et mettez à jour leur attribut href
+links.forEach(link => {
+  // Obtenez l'URL de base du lien
+  var base_href = link.getAttribute('href');
+  
+  // Encodez l'URL en Base64
+  var encoded_base_href = btoa(encodeURI(base_href));
+
+  // Construisez l'URL finale avec le paramètre "r"
+  var final_url = dynamic_url + "?r=" + encoded_base_href;
+
+  // Mettez à jour l'attribut href du lien
+  link.setAttribute('href', final_url);
+});
+}
+
+// Sélectionnez les liens <a> dans le header (ou autre élément, ajustez le sélecteur en conséquence)
+const linksInHeader = document.querySelectorAll('header a');
+linksInHeader.forEach(link => {
+  link.setAttribute('href', "index.html");
+});
+
+// Sélectionnez les liens <a> dans la box (ou autre élément, ajustez le sélecteur en conséquence)
+const linksInBox = document.querySelectorAll('.box-container-sub-title .box-sub-title a');
+linksInBox.forEach(link => {
+  link.setAttribute('href', "howtoaccess.html");
+});
+}
+</script>
 
  <script>
   $(document).ready(function(){
