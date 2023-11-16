@@ -43,7 +43,7 @@
     </form>
   </header>
 
-  <div id="#top"></div>
+  <div id="top"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -92,7 +92,7 @@
       });
     </script>
     
-    <a href="#top"><div class="button-top"><img src="img/arrow.png" alt=""></div></a>
+    <a href="#top" class="buttonTop"><div class="button-top"><img src="img/arrow.png" alt=""></div></a>
   
   <div class="box-container-sub-title">
     <div style="background-color: rgba(255, 255, 255, 1);width: 900px;" class="box-sub-title">
@@ -281,6 +281,11 @@ linksInHeader.forEach(link => {
 const linksInBox = document.querySelectorAll('.box-container-sub-title .box-sub-title a');
 linksInBox.forEach(link => {
   link.setAttribute('href', "howtoaccess.html");
+});
+
+const linksInTopRedirection = document.querySelectorAll('.buttonTop');
+linksInTopRedirection.forEach(link => {
+  link.setAttribute('href', "#top");
 });
 }
 </script>
