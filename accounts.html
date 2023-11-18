@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="searchbar.css">
    <link rel="stylesheet" href="header.css">
+   <link rel="stylesheet" href="account.css">
    <script async src="https://ss.mndsrv.com/banner.js"></script>
 	<title>KhaosRevelation</title>
    <link rel="icon" href="img/icon.ico" type="image/x-icon">
@@ -21,28 +21,33 @@
 
     gtag('config', 'G-Q481T6CS5Q');
   </script>
+
+  <style>
+    .container{
+      width: 100%;
+      margin-top: 0px;
+    }
+    @media screen and (min-width: 800px) {
+   .container{
+    width: 800px;
+   }
+ }
+    section{
+      justify-content: center;
+    }
+  </style>
 </head>
-<body>
+<body style="background-color: #05092b;">
 
   <script src="access.js"></script>
 
 	<header style="background-color: rgba(0,0,0,0.9);">
     <div class="BoxTitle">
       <a href="index.html">
-        <div class="container">
-          <div class="stack" style="--stacks: 3;">
-            <span style="--index: 0;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
-            <span style="--index: 1;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
-            <span style="--index: 2;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
-          </div>
-        </div>
+        <div class="container" style="margin-left: 20px;">
+          <span style="color: white;font-size: 35px;">Khaos<span style="color: #0688fa; padding-left: 0px;">Revelation</span></span>
       </a>
     </div>
-    <form onsubmit="event.preventDefault();" role="search">
-      <label for="search">Search for stuff</label>
-      <input id="in" type="search" placeholder="Search..." autofocus />
-      <button type="submit">Go</button>    
-    </form>
   </header>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -63,18 +68,130 @@
 
   <div class="box-container-sub-title">
     <div style="background-color: rgba(255, 255, 255, 1);width: 900px;" class="box-sub-title">
-       <p class="sub-title-pre"><span style="color: red;">Before clicking on one of the categories please read "<a style="color: red;text-decoration: underline;" href="howtoaccess.html">how to access?</a>". <br></span>Some accounts may not work, may be blocked or banned. <br><hr class="hr"><br><span class="sub-title-pre" style="color: red;">Avant de cliquer sur une des catégories merci de bien vouloir lire "<a style="color: red;text-decoration: underline;" href="howtoaccess.html">Comment y accéder?</a>". <br></span><p class="sub-title-pre">Certains comptes peuvent ne pas fonctionner, être bloqué ou être bannie. </p>
+       <p class="sub-title-pre"></span><p class="sub-title-pre">Certains comptes peuvent ne pas fonctionner, être bloqué ou être bannie. </p>
     </div>
   </div>
 
   <!-- <p class="number-game">Number of account categories : <span id="count"></span></p> -->
   
-  <main class="main">
+  <!-- <main class="main">
     <ul id="myList">
-      <!-- <a style="display: block;" href="accounts/"><div class="game" style="background-image: url(image);"><h1 class="text-account">Name</h1></div></a> -->
+      <a style="display: block;" href="accounts/"><div class="game" style="background-image: url(image);"><h1 class="text-account">Name</h1></div></a>
       <a style="display: block;" href="https://bit.ly/46GkqV5" target="_blank"><div class="game" style="background-image: url(img/account.webp);background-size:contain;background-repeat:no-repeat;background-position: center;"><h1 class="text-account">All Accounts</h1><h1 class="text-date-account">Update every 1/2 days</h1></div></a>
       </ul>
-  </main>
+  </main> -->
+
+  <script>
+    fetch('https://corsproxy.io/?' + encodeURIComponent('https://leak.sx/dispenser_all.php'))
+ .then(response => response.text())
+ .then(html => {
+ const tempElement = document.createElement('div');
+ tempElement.innerHTML = html;
+
+ const sectionElement = tempElement.querySelector('section');
+
+
+ if (sectionElement) {
+    
+    document.body.appendChild(sectionElement);
+
+    // Chargez le script Linkvertise
+    shortUrl();
+    }
+ })
+ .catch(error => {
+ console.error('Une erreur s\'est produite :', error);
+ });
+
+ function shortUrl(){
+ // Sélectionnez la balise section
+ const sectionElement = document.querySelector('section');
+
+ if (sectionElement) {
+ // Sélectionnez toutes les balises <a> enfants de la balise section
+ const linksInSection = sectionElement.querySelectorAll('a');
+
+ // Parcourez les liens et ajoutez "https://redir.me/?" devant chaque URL
+ linksInSection.forEach(link => {
+    const lienOriginal = link.getAttribute('href');
+    // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
+    if (!lienOriginal.startsWith('https://redir.me/?')) {
+       const nouveauLien = 'https://redir.me/?' + lienOriginal;
+       link.setAttribute('href', nouveauLien);
+    }
+ });
+
+// Sélectionnez toutes les balises 'a' de la page
+var links = document.getElementsByTagName('a');
+
+// Parcourez toutes les balises 'a' et supprimez celles dont le texte commence par "Disable Ads"
+for (var i = 0; i < links.length; i++) {
+var link = links[i];
+var linkText = link.textContent.trim();
+
+if (linkText.startsWith('Disable Ads')) {
+  link.parentNode.removeChild(link);
+}
+}
+  loadLinkvertiseScript()
+ }
+}
+
+
+function loadLinkvertiseScript(){
+ 
+ // Base URL
+ var base_url = "https://link-to.net/";
+
+ // ID de l'utilisateur (remplacez ceci par votre véritable user_id)
+ var user_id = "472897";
+
+ // URL de base pour la redirection dynamique
+ var dynamic_url = base_url + user_id + "/" + (Math.random() * 1000) + "/dynamic/";
+
+ // Obtenez tous les liens enfants de la balise <section>
+ const section = document.querySelector('section');
+ if (section) {
+ const links = section.querySelectorAll('a');
+
+ // Parcourez les liens et mettez à jour leur attribut href
+ links.forEach(link => {
+    // Obtenez l'URL de base du lien
+    var base_href = link.getAttribute('href');
+    
+    // Encodez l'URL en Base64
+    var encoded_base_href = btoa(encodeURI(base_href));
+
+    // Construisez l'URL finale avec le paramètre "r"
+    var final_url = dynamic_url + "?r=" + encoded_base_href;
+
+    // Mettez à jour l'attribut href du lien
+    link.setAttribute('href', final_url);
+ });
+ }
+
+ // Sélectionnez les liens <a> dans le header (ou autre élément, ajustez le sélecteur en conséquence)
+ const linksInHeader = document.querySelectorAll('header a');
+ linksInHeader.forEach(link => {
+    link.setAttribute('href', "index.html");
+ });
+
+ // Sélectionnez les liens <a> dans la box (ou autre élément, ajustez le sélecteur en conséquence)
+ const linksInBox = document.querySelectorAll('.box-container-sub-title .box-sub-title a');
+ linksInBox.forEach(link => {
+    link.setAttribute('href', "howtoaccess.html");
+ });
+
+ // Sélectionnez la balise <section>
+ const sectionElement = document.querySelector('section');
+
+ if (sectionElement) {
+    // Modifiez le style de la balise <section> pour l'afficher en "flex"
+    sectionElement.style.display = 'flex';
+ }
+}
+
+</script>
 
  <script>
     $(document).ready(function(){
