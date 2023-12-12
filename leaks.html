@@ -232,62 +232,44 @@ linksInSection.forEach(link => {
      link.setAttribute('href', nouveauLien);
   }
 });
-
-loadLinkvertiseScript()
 }
 
-shortUrl()
-
+shortUrl();
 
 function loadLinkvertiseScript(){
+  (() => {
+   function loadScript(url, callback) {
+   var script = document.createElement("script");
+   script.type = "text/javascript";
+   script.src = url;
+   script.onload = callback;
+   document.head.appendChild(script);
+   }
+   loadScript("https://cdn.work.ink/js/workink-sitescript.js", function() {
+   workink("https://work.ink/1RKh/lq25bpxq", [], ["www.khaosrevelation.site/index.html","www.khaosrevelation.site/","127.0.0.1:5500","127.0.0.1:5500/index.html",]);
+   });
+   })();
 
-// Base URL
-var base_url = "https://link-to.net/";
+   // Sélectionnez les liens <a> dans le header (ou autre élément, ajustez le sélecteur en conséquence)
+    const linksInHeader = document.querySelectorAll('header a');
+   linksInHeader.forEach(link => {
+      link.setAttribute('href', "index.html");
+   });
 
-// ID de l'utilisateur (remplacez ceci par votre véritable user_id)
-var user_id = "472897";
+   // Sélectionnez les liens <a> dans la box (ou autre élément, ajustez le sélecteur en conséquence)
+   const linksInBox = document.querySelectorAll('.box-container-sub-title .box-sub-title a');
+   linksInBox.forEach(link => {
+      link.setAttribute('href', "howtoaccess.html");
+   });
 
-// URL de base pour la redirection dynamique
-var dynamic_url = base_url + user_id + "/" + (Math.random() * 1000) + "/dynamic/";
+   const url = "https://www.khaosrevelation.site/redirection.html#https://redir.me/?https://t.me/mikaylacampinoshot";
+  const encodedUrl = btoa(url);
+  console.log("https://work.ink/1RKh/lq25bpxq?=" + encodedUrl);
 
-// Obtenez tous les liens enfants de la balise <section>
-const section = document.querySelector('section');
-if (section) {
-const links = section.querySelectorAll('a');
-
-// Parcourez les liens et mettez à jour leur attribut href
-links.forEach(link => {
-  // Obtenez l'URL de base du lien
-  var base_href = link.getAttribute('href');
-  
-  // Encodez l'URL en Base64
-  var encoded_base_href = btoa(encodeURI(base_href));
-
-  // Construisez l'URL finale avec le paramètre "r"
-  var final_url = dynamic_url + "?r=" + encoded_base_href;
-
-  // Mettez à jour l'attribut href du lien
-  link.setAttribute('href', final_url);
-});
 }
 
-// Sélectionnez les liens <a> dans le header (ou autre élément, ajustez le sélecteur en conséquence)
-const linksInHeader = document.querySelectorAll('header a');
-linksInHeader.forEach(link => {
-  link.setAttribute('href', "index.html");
-});
+loadLinkvertiseScript();
 
-// Sélectionnez les liens <a> dans la box (ou autre élément, ajustez le sélecteur en conséquence)
-const linksInBox = document.querySelectorAll('.box-container-sub-title .box-sub-title a');
-linksInBox.forEach(link => {
-  link.setAttribute('href', "howtoaccess.html");
-});
-
-const linksInTopRedirection = document.querySelectorAll('.buttonTop');
-linksInTopRedirection.forEach(link => {
-  link.setAttribute('href', "#top");
-});
-}
 </script>
 
  <script>
@@ -320,6 +302,8 @@ linksInTopRedirection.forEach(link => {
   });
 </script>
 </section>
+
+
 
 </body>
 </html>

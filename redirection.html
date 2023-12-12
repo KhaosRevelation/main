@@ -33,7 +33,7 @@
 </head>
 <body>
    <h1>Redirection...</h1><br>
-   <h2 class="h2">En cliquant sur "Accéder" vous aurez une deuxième pub <br><span style="font-size: 20px;">Grâce à cette 2ème pub vous soutenez à garder le site en ligne. Merci !</span><br><br> <a class="a" href="">Accéder</a></h2>
+   <h2 class="h2">En cliquant sur "Accéder" vous aurez une deuxième et dernière pub avant d'être redirigé sur votre destination final<br><span style="font-size: 20px;">Grâce à cette 2ème pub vous soutenez à garder le site en ligne. Merci !</span><br><br> <a class="a" href="">Accéder</a></h2>
    <script>
       function extractUrlFragment() {
     var fullUrl = window.location.href;
@@ -53,7 +53,8 @@ window.onload = function() {
     if (urlFragment) {
         var linkElement = document.querySelector('a.a');
         linkElement.href = urlFragment;
-        loadLinkvertiseScript()
+        loadLinkvertiseScript();
+        console.log(urlFragment);
 
         // Supprime le fragment d'URL de la barre d'adresse
         if (window.location.hash) {
@@ -63,32 +64,18 @@ window.onload = function() {
 }
 
 function loadLinkvertiseScript(){
-   
-   // Base URL
-   var base_url = "https://link-to.net/";
-
-   // ID de l'utilisateur (remplacez ceci par votre véritable user_id)
-   var user_id = "472897";
-
-   // URL de base pour la redirection dynamique
-   var dynamic_url = base_url + user_id + "/" + (Math.random() * 1000) + "/dynamic/";
-
-   const links = document.querySelectorAll('a');
-
-   // Parcourez les liens et mettez à jour leur attribut href
-   links.forEach(link => {
-      // Obtenez l'URL de base du lien
-      var base_href = link.getAttribute('href');
-      
-      // Encodez l'URL en Base64
-      var encoded_base_href = btoa(encodeURI(base_href));
-
-      // Construisez l'URL finale avec le paramètre "r"
-      var final_url = dynamic_url + "?r=" + encoded_base_href;
-
-      // Mettez à jour l'attribut href du lien
-      link.setAttribute('href', final_url);
+   (() => {
+   function loadScript(url, callback) {
+   var script = document.createElement("script");
+   script.type = "text/javascript";
+   script.src = url;
+   script.onload = callback;
+   document.head.appendChild(script);
+   }
+   loadScript("https://cdn.work.ink/js/workink-sitescript.js", function() {
+   workink("https://work.ink/1RKh/lq25bpxq", [], ["www.khaosrevelation.site/index.html","www.khaosrevelation.site/","127.0.0.1:5500","127.0.0.1:5500/index.html",]);
    });
+   })();
 }
 
       // function workink(){
@@ -107,7 +94,5 @@ function loadLinkvertiseScript(){
       // }
    </script>
 
-<script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html","http://127.0.0.1:5500/","http://127.0.0.1:3000/"]});</script>
-   
 </body>
 </html>
