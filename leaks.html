@@ -227,8 +227,8 @@ const linksInSection = document.querySelectorAll('a');
 linksInSection.forEach(link => {
   const lienOriginal = link.getAttribute('href');
   // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
-  if (!lienOriginal.startsWith('https://redir.me/?')) {
-     const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#https://redir.me/?' + lienOriginal;
+  if (!lienOriginal.startsWith('https://www.khaosrevelation.site/redirection.html#')) {
+     const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#' + lienOriginal;
      link.setAttribute('href', nouveauLien);
   }
 });
@@ -246,7 +246,7 @@ function loadLinkvertiseScript(){
    document.head.appendChild(script);
    }
    loadScript("https://cdn.work.ink/js/workink-sitescript.js", function() {
-   workink("https://work.ink/1RKh/lq25bpxq", [], ["www.khaosrevelation.site/index.html","www.khaosrevelation.site/","127.0.0.1:5500","127.0.0.1:5500/index.html",]);
+   workink("https://work.ink/1RKh/lq25bpxq", [], ["www.khaosrevelation.site/index.html","www.khaosrevelation.site/","http://127.0.0.1:5500","127.0.0.1:5500/index.html",]);
    });
    })();
 
@@ -262,9 +262,9 @@ function loadLinkvertiseScript(){
       link.setAttribute('href', "howtoaccess.html");
    });
 
-   const url = "https://www.khaosrevelation.site/redirection.html#https://redir.me/?https://t.me/mikaylacampinoshot";
-  const encodedUrl = btoa(url);
-  console.log("https://work.ink/1RKh/lq25bpxq?=" + encodedUrl);
+   const url = "";
+  const encodedUrl = btoa("https://work.ink/1RKh/lq25bpxq?=" + url);
+  console.log(encodedUrl);
 
 }
 
