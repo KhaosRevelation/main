@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script> -->
@@ -33,25 +33,44 @@
 
     <script>
       fetch('https://corsproxy.io/?' + encodeURIComponent('https://pornleaks.in/packs.php'))
-   .then(response => response.text())
+   .then(response => {
+       if (!response.ok) {
+           throw new Error(response.status);
+       }
+       return response.text();
+   })
    .then(html => {
-   const tempElement = document.createElement('div');
-   tempElement.innerHTML = html;
+       const tempElement = document.createElement('div');
+       tempElement.innerHTML = html;
 
-   const sectionElement = tempElement.querySelector('section.pt-35.postxd');
+       const sectionElement = tempElement.querySelector('section.pt-35.postxd');
 
-
-   if (sectionElement) {
-      
-      document.body.appendChild(sectionElement);
-
-      // Chargez le script Linkvertise
-      shortUrl();
-      }
+       if (sectionElement) {
+           document.body.appendChild(sectionElement);
+           // Chargez le script Linkvertise
+           shortUrl();
+       }
    })
    .catch(error => {
-   console.error('Une erreur s\'est produite :', error);
+       console.error('Une erreur s\'est produite ', error);
+       // Créez un nouvel élément div
+       const errorElement = document.createElement('div');
+       
+       // Ajoutez du texte à l'élément div
+       errorElement.textContent = 'Une erreur s\'est produite ' + error;
+       errorElement.style.textAlign = "center";
+       errorElement.style.color = "red";
+       errorElement.style.fontWeight = "600";
+       errorElement.style.fontSize = "40px";
+       errorElement.style.display = "flex";
+       errorElement.style.justifyContent = "center";
+       errorElement.style.alignItems = "center";
+       errorElement.style.height = "90vh";
+       
+       // Ajoutez l'élément div au corps du document
+       document.body.appendChild(errorElement);
    });
+
 
    function shortUrl(){
    // Sélectionnez la balise section
@@ -61,15 +80,15 @@
    // Sélectionnez toutes les balises <a> enfants de la balise section
    const linksInSection = sectionElement.querySelectorAll('a');
 
-   // Parcourez les liens et ajoutez "https://redir.me/?" devant chaque URL
-   linksInSection.forEach(link => {
-      const lienOriginal = link.getAttribute('href');
-      // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
-      if (!lienOriginal.startsWith('https://redir.me/?')) {
-         const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#https://redir.me/?' + lienOriginal;
-         link.setAttribute('href', nouveauLien);
-      }
-   });
+  //  // Parcourez les liens et ajoutez "https://redir.me/?" devant chaque URL
+  //  linksInSection.forEach(link => {
+  //     const lienOriginal = link.getAttribute('href');
+  //     // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
+  //     if (!lienOriginal.startsWith('https://www.khaosrevelation.site/redirection.html#')) {
+  //        const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#' + lienOriginal;
+  //        link.setAttribute('href', nouveauLien);
+  //     }
+  //  });
 
 // Sélectionnez toutes les balises 'img' de la page
 var images = document.getElementsByTagName('img');
@@ -120,7 +139,7 @@ for (var i = 0; i < divsToRemove.length; i++) {
 }
 
 
-   loadLinkvertiseScript()
+  //  loadLinkvertiseScript()
    }
 }
 
@@ -176,9 +195,9 @@ function loadLinkvertiseScript(){
       // Modifiez le style de la balise <section> pour l'afficher en "flex"
       sectionElement.style.display = 'flex';
    }
-}
-    </script>
-<script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html"]});</script>
+}    
+  </script>
+<!-- <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(472897, {whitelist: [], blacklist: ["https://www.khaosrevelation.site/index.html"]});</script> -->
     
 </body>
 </html>

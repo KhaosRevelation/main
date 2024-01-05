@@ -223,15 +223,15 @@ function shortUrl(){
 // Sélectionnez toutes les balises <a> enfants de la balise section
 const linksInSection = document.querySelectorAll('a');
 
-// Parcourez les liens et ajoutez "https://redir.me/?" devant chaque URL
-linksInSection.forEach(link => {
-  const lienOriginal = link.getAttribute('href');
-  // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
-  if (!lienOriginal.startsWith('https://www.khaosrevelation.site/redirection.html#')) {
-     const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#' + lienOriginal;
-     link.setAttribute('href', nouveauLien);
-  }
-});
+// // Parcourez les liens et ajoutez "https://redir.me/?" devant chaque URL
+// linksInSection.forEach(link => {
+//   const lienOriginal = link.getAttribute('href');
+//   // Vérifiez si le lien est déjà un lien court, auquel cas, ne l'ajoutez pas
+//   if (!lienOriginal.startsWith('https://www.khaosrevelation.site/redirection.html#')) {
+//      const nouveauLien = 'https://www.khaosrevelation.site/redirection.html#' + lienOriginal;
+//      link.setAttribute('href', nouveauLien);
+//   }
+// });
 }
 
 shortUrl();
@@ -268,7 +268,7 @@ function loadLinkvertiseScript(){
 
 }
 
-loadLinkvertiseScript();
+// loadLinkvertiseScript();
 
 </script>
 
